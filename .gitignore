@@ -1,0 +1,6 @@
+.DS_Store
+.ipynb_checkpoints/
+venv/
+database.sqlite
+__pycache__/
+.csv

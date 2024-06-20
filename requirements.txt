@@ -1,0 +1,14 @@
+notebook
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+statsmodels
+scikit-learn
+pyarrow
+duckdb
+scikit-plot
+scikit-posthocs
+imbalanced-learn
+
