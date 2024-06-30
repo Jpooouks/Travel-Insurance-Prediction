@@ -1,3 +1,5 @@
+import pandas as pd
+
 def find_outliers(df):
     outlier_indices = []
     for column in df.columns:
@@ -16,3 +18,20 @@ def find_outliers(df):
     unique_outlier_indices = list(set(outlier_indices))
     
     return df.loc[unique_outlier_indices]
+
+
+def shorten_param(param_name):
+    if "__" in param_name:
+        return param_name.rsplit("__", 1)[1]
+    return param_name
+
+
+def get_result_df(param_dist, pipeline):
+    column_results = [f"param_{name}" for name in param_dist.keys()]
+    column_results += ["mean_test_score", "std_test_score", "rank_test_score"]
+
+    cv_results = pd.DataFrame(pipeline.cv_results_)
+    cv_results = cv_results[column_results].sort_values(
+    "mean_test_score", ascending=False
+    )
+    return cv_results.rename(shorten_param, axis=1)

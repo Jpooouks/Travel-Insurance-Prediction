@@ -17,8 +17,8 @@ The insurance was offered to some customers in 2019, and the given data has been
 - **Travel Insurance**: Whether the customer bought the travel insurance package during the introductory offering held in the year 2019.
 ## About the project
 This project will be conducted in the following manner:
-1. The data will be cleaned, valiated and analyzed
-2. Hypotheses will be raised and inference conducted
+1. The data will be cleaned, valiated and analyzed.
+2. Hypotheses will be raised and inference conducted.
 3. Package sales performance will modeled.
 # Quickstart guide
 If you want to run this notebook:
